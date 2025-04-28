@@ -63,11 +63,16 @@ public class HelloApplication extends Application implements EventHandler{ //inh
         layout.getChildren().add(anchorPane);
     }
 
+    // TODO: follow steps 22-34 in README.md to create an event handler
+    int buttonPresses;
+
     @Override
     public void handle(Event event) {
         if (event.getSource() == button1) {
             label1.setText("New Text!");
         }
+        if (event.getSource() == button2) {
+            label2.setText("" + ++buttonPresses);
+        }
     }
-    // TODO: follow steps 22-34 in README.md to create an event handler
 }
